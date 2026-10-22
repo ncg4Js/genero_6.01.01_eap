@@ -2,6 +2,10 @@
 <WorkspaceViewState version="1.0">
   <ExpandedNodes>
     <Node path=""/>
+    <Node path="/northwind[group]"/>
+    <Node path="/northwind[group]/Databases[library]"/>
+    <Node path="/northwind[group]/Library[library]"/>
+    <Node path="/northwind[group]/nw_customers[application]"/>
   </ExpandedNodes>
   <OpenDocuments/>
   <CurrentDocument filePath="" module="mod-wp"/>

@@ -70,11 +70,19 @@
   </Settings>
   <LanguageList version="1.0"/>
   <PlatformList version="1.0"/>
-  <Group id="75644415" label="Group" language="Genero">
-    <Application binaryName="Application" dependencies="14000,1986" id="18736" label="Application">
-      <Configuration id="-1429969501" label="Application"/>
+  <Group id="75644415" label="northwind" language="Genero">
+    <Library binaryName="Databases" id="1986" label="Databases">
+      <File filePath="../../../../docker_compose/workspace/GeneroV6/work/tripwires/ifx_northwind_test/schema/northwind.sch"/>
+    </Library>
+    <Library binaryName="Library" dependencies="1986" id="14000" label="Library">
+      <File filePath="../../../../docker_compose/workspace/GeneroV6/work/tripwires/ifx_northwind_test/src/nw_common.4gl"/>
+    </Library>
+    <Application binaryName="nw_customers" dependencies="14000,1986" id="18736" label="nw_customers">
+      <Configuration id="-1429969501" label="nw_customers"/>
+      <File filePath="../../../../docker_compose/workspace/GeneroV6/work/tripwires/ifx_northwind_test/src/nw_customers.4gl"/>
+      <File filePath="../../../../docker_compose/workspace/GeneroV6/work/tripwires/ifx_northwind_test/src/nw_customers.per"/>
+      <File filePath="resources/nw_customers.xcf"/>
+      <File filePath="../../../../docker_compose/workspace/GeneroV6/work/tripwires/ifx_northwind_test/src/nw_customers_db.4gl"/>
     </Application>
-    <Library binaryName="Databases" id="1986" label="Databases"/>
-    <Library binaryName="Library" dependencies="1986" id="14000" label="Library"/>
   </Group>
 </Project>

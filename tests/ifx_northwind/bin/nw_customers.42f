@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<Form name="nw_customers" build="6.01.00" sqlDbName="northwind" text="Northwind - Customers" width="108" height="4">
+  <VBox>
+    <Group name="g_search" text="Search">
+      <Grid width="92" height="1">
+        <Label text="Code" posY="0" posX="1" gridWidth="5"/>
+        <FormField name="customers.customercode" colName="customercode" sqlType="VARCHAR(5)" fieldId="0" sqlTabName="customers" tabIndex="1">
+          <Edit width="5" posY="0" posX="7" gridWidth="5"/>
+        </FormField>
+        <Label text="Company" posY="0" posX="15" gridWidth="8"/>
+        <FormField name="customers.companyname" colName="companyname" sqlType="VARCHAR(40)" fieldId="1" sqlTabName="customers" tabIndex="2">
+          <Edit width="20" posY="0" posX="24" gridWidth="20"/>
+        </FormField>
+        <Label text="City" posY="0" posX="47" gridWidth="5"/>
+        <FormField name="customers.city" colName="city" sqlType="VARCHAR(15)" fieldId="2" sqlTabName="customers" tabIndex="3">
+          <Edit width="13" posY="0" posX="53" gridWidth="13"/>
+        </FormField>
+        <Label text="Country" posY="0" posX="69" gridWidth="8"/>
+        <FormField name="customers.country" colName="country" sqlType="VARCHAR(15)" fieldId="3" sqlTabName="customers" tabIndex="4">
+          <Edit width="13" posY="0" posX="78" gridWidth="13"/>
+        </FormField>
+      </Grid>
+    </Group>
+    <Table pageSize="1" name="t_customers" height="10" tabName="sr_customers">
+      <TableColumn name="formonly.c_customerid" colName="c_customerid" fieldId="4" sqlTabName="formonly" text="Id" tabIndex="5">
+        <Edit width="5"/>
+      </TableColumn>
+      <TableColumn name="formonly.c_customercode" colName="c_customercode" fieldId="5" sqlTabName="formonly" text="Code" tabIndex="6">
+        <Edit width="5"/>
+      </TableColumn>
+      <TableColumn name="formonly.c_companyname" colName="c_companyname" fieldId="6" sqlTabName="formonly" text="Company" tabIndex="7">
+        <Edit width="20"/>
+      </TableColumn>
+      <TableColumn name="formonly.c_contactname" colName="c_contactname" fieldId="7" sqlTabName="formonly" text="Contact" tabIndex="8">
+        <Edit width="17"/>
+      </TableColumn>
+      <TableColumn name="formonly.c_city" colName="c_city" fieldId="8" sqlTabName="formonly" text="City" tabIndex="9">
+        <Edit width="13"/>
+      </TableColumn>
+      <TableColumn name="formonly.c_country" colName="c_country" fieldId="9" sqlTabName="formonly" text="Country" tabIndex="10">
+        <Edit width="13"/>
+      </TableColumn>
+      <TableColumn name="formonly.c_segment" colName="c_segment" fieldId="10" sqlTabName="formonly" text="Segment" tabIndex="11">
+        <Edit width="13"/>
+      </TableColumn>
+      <TableColumn name="formonly.c_statename" colName="c_statename" fieldId="11" sqlTabName="formonly" text="US state" tabIndex="12">
+        <Edit width="13"/>
+      </TableColumn>
+    </Table>
+    <Table pageSize="1" name="t_countries" height="6" tabName="sr_countries">
+      <TableColumn name="formonly.k_country" colName="k_country" fieldId="12" sqlTabName="formonly" text="Country" tabIndex="13">
+        <Edit width="13"/>
+      </TableColumn>
+      <TableColumn name="formonly.k_ncust" colName="k_ncust" fieldId="13" sqlTabName="formonly" text="Cust." tabIndex="14">
+        <Edit width="4"/>
+      </TableColumn>
+      <TableColumn name="formonly.k_cities" colName="k_cities" fieldId="14" sqlTabName="formonly" text="Cities" tabIndex="15">
+        <Edit width="54"/>
+      </TableColumn>
+    </Table>
+    <Grid width="32" height="1">
+      <Label text="Customers without orders" posY="0" posX="1" gridWidth="25"/>
+      <FormField name="formonly.noorder_count" colName="noorder_count" fieldId="15" sqlTabName="formonly" noEntry="1" tabIndex="16">
+        <Edit width="4" posY="0" posX="27" gridWidth="4"/>
+      </FormField>
+    </Grid>
+  </VBox>
+  <RecordView tabName="customers">
+    <Link colName="customercode" fieldIdRef="0"/>
+    <Link colName="companyname" fieldIdRef="1"/>
+    <Link colName="city" fieldIdRef="2"/>
+    <Link colName="country" fieldIdRef="3"/>
+  </RecordView>
+  <RecordView tabName="formonly">
+    <Link colName="c_customerid" fieldIdRef="4"/>
+    <Link colName="c_customercode" fieldIdRef="5"/>
+    <Link colName="c_companyname" fieldIdRef="6"/>
+    <Link colName="c_contactname" fieldIdRef="7"/>
+    <Link colName="c_city" fieldIdRef="8"/>
+    <Link colName="c_country" fieldIdRef="9"/>
+    <Link colName="c_segment" fieldIdRef="10"/>
+    <Link colName="c_statename" fieldIdRef="11"/>
+    <Link colName="k_country" fieldIdRef="12"/>
+    <Link colName="k_ncust" fieldIdRef="13"/>
+    <Link colName="k_cities" fieldIdRef="14"/>
+    <Link colName="noorder_count" fieldIdRef="15"/>
+  </RecordView>
+</Form>

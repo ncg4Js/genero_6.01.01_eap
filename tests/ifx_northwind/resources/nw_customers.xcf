@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<APPLICATION Parent="defaultgwc"
+   xsi:noNamespaceSchemaLocation="http://www.4js.com/ns/gas/6.00/cfextwa.xsd"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- OPENTELEMETRY Enabled="TRUE"/ -->
+  <EXECUTION>
+    <PATH>C:/work/6.01.01_EAP/tests/ifx_northwind/bin</PATH>
+    <MODULE>nw_customers</MODULE>
+  </EXECUTION>
+</APPLICATION>

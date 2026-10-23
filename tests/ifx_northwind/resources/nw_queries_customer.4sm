@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<StartMenu text="Northwind - Customer queries">
+  <StartMenuGroup text="Customer queries">
+    <StartMenuCommand text="1 - Customers" exec="fglrun nw_queries_customer 1" comment="Search customers, with US state and segment" />
+    <StartMenuCommand text="2 - Orders per customer" exec="fglrun nw_queries_customer 2" comment="Order count and last order date" />
+    <StartMenuCommand text="3 - Sales per customer" exec="fglrun nw_queries_customer 3" comment="Total sales above a minimum" />
+    <StartMenuCommand text="4 - Buyers of a category" exec="fglrun nw_queries_customer 4" comment="Customers who bought from a category" />
+    <StartMenuCommand text="5 - Top per country" exec="fglrun nw_queries_customer 5" comment="Ranking and share per country" />
+  </StartMenuGroup>
+</StartMenu>

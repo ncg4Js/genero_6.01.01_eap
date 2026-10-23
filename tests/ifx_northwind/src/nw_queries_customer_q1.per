@@ -1,0 +1,48 @@
+SCHEMA northwind
+
+LAYOUT (TEXT = "Query 1 - Customers")
+VBOX
+GROUP g_search (TEXT = "Search")
+GRID
+{
+ Code [f01  ]  Company [f02                 ]  City [f03          ]  Country [f04          ]
+}
+END
+END
+TABLE t_q1 (HEIGHT = 16)
+{
+[a01  |a02  |a03                 |a04              |a05          |a06          |a07          |a08          ]
+}
+END
+GRID
+{
+ Rows [f05   ]
+}
+END
+END
+END
+
+TABLES
+customers
+END
+
+ATTRIBUTES
+f01 = customers.customercode;
+f02 = customers.companyname;
+f03 = customers.city;
+f04 = customers.country;
+f05 = FORMONLY.rowcount TYPE INTEGER, NOENTRY;
+
+a01 = FORMONLY.q1_id, TITLE = "Id";
+a02 = FORMONLY.q1_code, TITLE = "Code";
+a03 = FORMONLY.q1_company, TITLE = "Company";
+a04 = FORMONLY.q1_contact, TITLE = "Contact";
+a05 = FORMONLY.q1_city, TITLE = "City";
+a06 = FORMONLY.q1_country, TITLE = "Country";
+a07 = FORMONLY.q1_segment, TITLE = "Segment";
+a08 = FORMONLY.q1_state, TITLE = "US state";
+END
+
+INSTRUCTIONS
+SCREEN RECORD sr_q1 (q1_id, q1_code, q1_company, q1_contact, q1_city, q1_country, q1_segment, q1_state);
+END

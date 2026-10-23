@@ -1,0 +1,3 @@
+# Northwind connection (Informix 14.10). User and password come from NW_USER / NW_PASSWORD at run time.
+dbi.database.northwind.driver = "dbmifx_9"
+dbi.database.northwind.source = "northwind@informix"

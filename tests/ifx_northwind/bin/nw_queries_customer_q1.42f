@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<Form name="nw_queries_customer_q1" build="6.01.00" sqlDbName="northwind" text="Query 1 - Customers" width="108" height="3">
+  <VBox>
+    <Group name="g_search" text="Search">
+      <Grid width="92" height="1">
+        <Label text="Code" posY="0" posX="1" gridWidth="5"/>
+        <FormField name="customers.customercode" colName="customercode" sqlType="VARCHAR(5)" fieldId="0" sqlTabName="customers" tabIndex="1">
+          <Edit width="5" posY="0" posX="7" gridWidth="5"/>
+        </FormField>
+        <Label text="Company" posY="0" posX="15" gridWidth="8"/>
+        <FormField name="customers.companyname" colName="companyname" sqlType="VARCHAR(40)" fieldId="1" sqlTabName="customers" tabIndex="2">
+          <Edit width="20" posY="0" posX="24" gridWidth="20"/>
+        </FormField>
+        <Label text="City" posY="0" posX="47" gridWidth="5"/>
+        <FormField name="customers.city" colName="city" sqlType="VARCHAR(15)" fieldId="2" sqlTabName="customers" tabIndex="3">
+          <Edit width="13" posY="0" posX="53" gridWidth="13"/>
+        </FormField>
+        <Label text="Country" posY="0" posX="69" gridWidth="8"/>
+        <FormField name="customers.country" colName="country" sqlType="VARCHAR(15)" fieldId="3" sqlTabName="customers" tabIndex="4">
+          <Edit width="13" posY="0" posX="78" gridWidth="13"/>
+        </FormField>
+      </Grid>
+    </Group>
+    <Table pageSize="1" name="t_q1" height="16" tabName="sr_q1">
+      <TableColumn name="formonly.q1_id" colName="q1_id" fieldId="5" sqlTabName="formonly" text="Id" tabIndex="5">
+        <Edit width="5"/>
+      </TableColumn>
+      <TableColumn name="formonly.q1_code" colName="q1_code" fieldId="6" sqlTabName="formonly" text="Code" tabIndex="6">
+        <Edit width="5"/>
+      </TableColumn>
+      <TableColumn name="formonly.q1_company" colName="q1_company" fieldId="7" sqlTabName="formonly" text="Company" tabIndex="7">
+        <Edit width="20"/>
+      </TableColumn>
+      <TableColumn name="formonly.q1_contact" colName="q1_contact" fieldId="8" sqlTabName="formonly" text="Contact" tabIndex="8">
+        <Edit width="17"/>
+      </TableColumn>
+      <TableColumn name="formonly.q1_city" colName="q1_city" fieldId="9" sqlTabName="formonly" text="City" tabIndex="9">
+        <Edit width="13"/>
+      </TableColumn>
+      <TableColumn name="formonly.q1_country" colName="q1_country" fieldId="10" sqlTabName="formonly" text="Country" tabIndex="10">
+        <Edit width="13"/>
+      </TableColumn>
+      <TableColumn name="formonly.q1_segment" colName="q1_segment" fieldId="11" sqlTabName="formonly" text="Segment" tabIndex="11">
+        <Edit width="13"/>
+      </TableColumn>
+      <TableColumn name="formonly.q1_state" colName="q1_state" fieldId="12" sqlTabName="formonly" text="US state" tabIndex="12">
+        <Edit width="13"/>
+      </TableColumn>
+    </Table>
+    <Grid width="14" height="1">
+      <Label text="Rows" posY="0" posX="1" gridWidth="5"/>
+      <FormField name="formonly.rowcount" colName="rowcount" sqlType="INTEGER" fieldId="4" sqlTabName="formonly" noEntry="1" tabIndex="13">
+        <Edit width="6" posY="0" posX="7" gridWidth="6"/>
+      </FormField>
+    </Grid>
+  </VBox>
+  <RecordView tabName="customers">
+    <Link colName="customercode" fieldIdRef="0"/>
+    <Link colName="companyname" fieldIdRef="1"/>
+    <Link colName="city" fieldIdRef="2"/>
+    <Link colName="country" fieldIdRef="3"/>
+  </RecordView>
+  <RecordView tabName="formonly">
+    <Link colName="rowcount" fieldIdRef="4"/>
+    <Link colName="q1_id" fieldIdRef="5"/>
+    <Link colName="q1_code" fieldIdRef="6"/>
+    <Link colName="q1_company" fieldIdRef="7"/>
+    <Link colName="q1_contact" fieldIdRef="8"/>
+    <Link colName="q1_city" fieldIdRef="9"/>
+    <Link colName="q1_country" fieldIdRef="10"/>
+    <Link colName="q1_segment" fieldIdRef="11"/>
+    <Link colName="q1_state" fieldIdRef="12"/>
+  </RecordView>
+</Form>

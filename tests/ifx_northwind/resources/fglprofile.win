@@ -1,0 +1,6 @@
+# Northwind connection on Windows (Informix 14.10 at localhost:9088, setnet32 entry "informix").
+# The 6.01 dbmdefault driver needs CSDK 15 (isqlt15a.dll); the installed CSDK 4.50 has isqlt09a.dll, so use dbmifx_9.
+# User and password come from NW_USER / NW_PASSWORD at run time.
+dbi.default.driver = "dbmifx_9"
+dbi.database.northwind.driver = "dbmifx_9"
+dbi.database.northwind.source = "northwind@informix"

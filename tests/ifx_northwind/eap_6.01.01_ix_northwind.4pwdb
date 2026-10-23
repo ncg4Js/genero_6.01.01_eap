@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <WorkspaceDatabase fileContentsEncoding="CP1252" version="3.0">
-<File n="../../../../docker_compose/workspace/GeneroV6/work/tripwires/ifx_northwind_test/src/nw_common.4gl" s="1" ts="20261022110413625"/>
-<File n="../../../../docker_compose/workspace/GeneroV6/work/tripwires/ifx_northwind_test/src/nw_customers.4gl" s="1" ts="20261022113422734">
-<Dep t="../../../../docker_compose/workspace/GeneroV6/work/tripwires/ifx_northwind_test/src/nw_common.4gl"/>
-<Dep t="../../../../docker_compose/workspace/GeneroV6/work/tripwires/ifx_northwind_test/src/nw_customers_db.4gl"/>
+<File n="src/nw_common.4gl" s="1" ts="20261023103808125"/>
+<File n="src/nw_customers.4gl" s="1" ts="20261023103808108">
+<Dep t="src/nw_common.4gl"/>
+<Dep t="src/nw_customers_db.4gl"/>
 </File>
-<File n="../../../../docker_compose/workspace/GeneroV6/work/tripwires/ifx_northwind_test/src/nw_customers_db.4gl" s="1" ts="20261022110413629"/>
+<File n="src/nw_customers_db.4gl" s="1" ts="20261023112005893"/>
+<File n="src/nw_queries_customer.4gl" s="1" ts="20261023114437032">
+<Dep t="src/nw_common.4gl"/>
+</File>
 </WorkspaceDatabase>

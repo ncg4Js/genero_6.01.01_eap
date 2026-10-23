@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Form name="nw_staff" build="6.00.02" sqlDbName="northwind" text="Northwind - Staff" width="98" height="5">
+  <VBox>
+    <Table pageSize="1" name="t_tree" height="9" tabName="sr_tree">
+      <TableColumn name="formonly.t_lvl" colName="t_lvl" fieldId="0" sqlTabName="formonly" text="Lvl" tabIndex="1">
+        <Edit width="3"/>
+      </TableColumn>
+      <TableColumn name="formonly.t_employeeid" colName="t_employeeid" fieldId="1" sqlTabName="formonly" text="Id" tabIndex="2">
+        <Edit width="6"/>
+      </TableColumn>
+      <TableColumn name="formonly.t_fullname" colName="t_fullname" fieldId="2" sqlTabName="formonly" text="Employee" tabIndex="3">
+        <Edit width="28"/>
+      </TableColumn>
+      <TableColumn name="formonly.t_title" colName="t_title" fieldId="3" sqlTabName="formonly" text="Title" tabIndex="4">
+        <Edit width="26"/>
+      </TableColumn>
+      <TableColumn name="formonly.t_path" colName="t_path" fieldId="4" sqlTabName="formonly" text="Reports to" tabIndex="5">
+        <Edit width="29"/>
+      </TableColumn>
+    </Table>
+    <Table pageSize="1" name="t_sales" height="9" tabName="sr_sales">
+      <TableColumn name="formonly.s_employeeid" colName="s_employeeid" fieldId="5" sqlTabName="formonly" text="Id" tabIndex="6">
+        <Edit width="6"/>
+      </TableColumn>
+      <TableColumn name="formonly.s_lastname" colName="s_lastname" fieldId="6" sqlTabName="formonly" text="Employee" tabIndex="7">
+        <Edit width="20"/>
+      </TableColumn>
+      <TableColumn name="formonly.s_norders" colName="s_norders" fieldId="7" sqlTabName="formonly" text="Orders" tabIndex="8">
+        <Edit width="8"/>
+      </TableColumn>
+      <TableColumn name="formonly.s_freight" colName="s_freight" fieldId="8" sqlTabName="formonly" text="Freight" tabIndex="9">
+        <Edit width="12"/>
+      </TableColumn>
+      <TableColumn name="formonly.s_years" colName="s_years" fieldId="9" sqlTabName="formonly" text="Years" tabIndex="10">
+        <Edit width="8"/>
+      </TableColumn>
+    </Table>
+    <Grid width="81" height="3">
+      <Label text="Territories" posY="0" posX="1" gridWidth="12"/>
+      <FormField name="formonly.territories" colName="territories" fieldId="10" sqlTabName="formonly" noEntry="1" tabIndex="11">
+        <TextEdit width="54" height="2" stretch="x" wantReturns="1" scroll="1" posY="0" posX="14" gridWidth="54" gridHeight="2"/>
+      </FormField>
+      <Label text="Hired before" posY="2" posX="1" gridWidth="13"/>
+      <FormField name="formonly.hired_before" colName="hired_before" sqlType="DATE" fieldId="11" sqlTabName="formonly" tabIndex="12">
+        <Edit width="10" posY="2" posX="15" gridWidth="10"/>
+      </FormField>
+      <FormField name="formonly.hired_count" colName="hired_count" fieldId="12" sqlTabName="formonly" noEntry="1" tabIndex="13">
+        <Edit width="6" posY="2" posX="29" gridWidth="6"/>
+      </FormField>
+      <Label text="employees" posY="2" posX="37" gridWidth="9"/>
+      <Label text="Anniversaries next month" posY="2" posX="50" gridWidth="25"/>
+      <FormField name="formonly.ann_count" colName="ann_count" fieldId="13" sqlTabName="formonly" noEntry="1" tabIndex="14">
+        <Edit width="4" posY="2" posX="76" gridWidth="4"/>
+      </FormField>
+    </Grid>
+  </VBox>
+  <RecordView tabName="formonly">
+    <Link colName="t_lvl" fieldIdRef="0"/>
+    <Link colName="t_employeeid" fieldIdRef="1"/>
+    <Link colName="t_fullname" fieldIdRef="2"/>
+    <Link colName="t_title" fieldIdRef="3"/>
+    <Link colName="t_path" fieldIdRef="4"/>
+    <Link colName="s_employeeid" fieldIdRef="5"/>
+    <Link colName="s_lastname" fieldIdRef="6"/>
+    <Link colName="s_norders" fieldIdRef="7"/>
+    <Link colName="s_freight" fieldIdRef="8"/>
+    <Link colName="s_years" fieldIdRef="9"/>
+    <Link colName="territories" fieldIdRef="10"/>
+    <Link colName="hired_before" fieldIdRef="11"/>
+    <Link colName="hired_count" fieldIdRef="12"/>
+    <Link colName="ann_count" fieldIdRef="13"/>
+  </RecordView>
+</Form>

@@ -1,0 +1,59 @@
+SCHEMA northwind
+
+LAYOUT (TEXT = "Northwind - Customers")
+VBOX
+GROUP g_search (TEXT = "Search")
+GRID
+{
+ Code [f01  ]  Company [f02                 ]  City [f03          ]  Country [f04          ]
+}
+END
+END
+TABLE t_customers (HEIGHT = 10)
+{
+[c01  |c02  |c03                 |c04              |c05          |c06          |c07          |c08          ]
+}
+END
+TABLE t_countries (HEIGHT = 6)
+{
+[k01          |k02 |k03                                                   ]
+}
+END
+GRID
+{
+ Customers without orders [s01 ]
+}
+END
+END
+END
+
+TABLES
+customers
+END
+
+ATTRIBUTES
+f01 = customers.customercode;
+f02 = customers.companyname;
+f03 = customers.city;
+f04 = customers.country;
+
+c01 = FORMONLY.c_customerid, TITLE = "Id";
+c02 = FORMONLY.c_customercode, TITLE = "Code";
+c03 = FORMONLY.c_companyname, TITLE = "Company";
+c04 = FORMONLY.c_contactname, TITLE = "Contact";
+c05 = FORMONLY.c_city, TITLE = "City";
+c06 = FORMONLY.c_country, TITLE = "Country";
+c07 = FORMONLY.c_segment, TITLE = "Segment";
+c08 = FORMONLY.c_statename, TITLE = "US state";
+
+k01 = FORMONLY.k_country, TITLE = "Country";
+k02 = FORMONLY.k_ncust, TITLE = "Cust.";
+k03 = FORMONLY.k_cities, TITLE = "Cities";
+
+s01 = FORMONLY.noorder_count, NOENTRY;
+END
+
+INSTRUCTIONS
+SCREEN RECORD sr_customers (c_customerid, c_customercode, c_companyname, c_contactname, c_city, c_country, c_segment, c_statename);
+SCREEN RECORD sr_countries (k_country, k_ncust, k_cities);
+END

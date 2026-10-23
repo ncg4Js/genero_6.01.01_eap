@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Form name="nw_orders" build="6.00.02" sqlDbName="northwind" text="Northwind - Order desk" width="93" height="5">
+  <VBox>
+    <Group name="g_search" text="Search">
+      <Grid width="73" height="2">
+        <Label text="Order" posY="0" posX="1" gridWidth="5"/>
+        <FormField name="orders.orderid" colName="orderid" sqlType="INTEGER" fieldId="0" sqlTabName="orders" tabIndex="1">
+          <Edit width="10" posY="0" posX="9" gridWidth="10"/>
+        </FormField>
+        <Label text="Date" posY="0" posX="22" gridWidth="5"/>
+        <FormField name="orders.orderdate" colName="orderdate" sqlType="DATE" fieldId="1" sqlTabName="orders" tabIndex="2">
+          <Edit width="10" posY="0" posX="28" gridWidth="10"/>
+        </FormField>
+        <Label text="Customer" posY="0" posX="41" gridWidth="9"/>
+        <FormField name="customers.companyname" colName="companyname" sqlType="VARCHAR(40)" fieldId="2" sqlTabName="customers" tabIndex="3">
+          <Edit width="21" posY="0" posX="51" gridWidth="21"/>
+        </FormField>
+        <Label text="Ship to" posY="1" posX="1" gridWidth="7"/>
+        <FormField name="orders.shipcountry" colName="shipcountry" sqlType="VARCHAR(15)" fieldId="3" sqlTabName="orders" tabIndex="4">
+          <Edit width="15" posY="1" posX="9" gridWidth="15"/>
+        </FormField>
+        <Label text="Employee" posY="1" posX="27" gridWidth="9"/>
+        <FormField name="employees.lastname" colName="lastname" sqlType="VARCHAR(20)" fieldId="4" sqlTabName="employees" tabIndex="5">
+          <Edit width="8" posY="1" posX="37" gridWidth="8"/>
+        </FormField>
+      </Grid>
+    </Group>
+    <Table pageSize="1" name="t_orders" height="10" tabName="sr_orders">
+      <TableColumn name="formonly.o_orderid" colName="o_orderid" fieldId="5" sqlTabName="formonly" text="Order" tabIndex="6">
+        <Edit width="10"/>
+      </TableColumn>
+      <TableColumn name="formonly.o_orderdate" colName="o_orderdate" sqlType="DATE" fieldId="6" sqlTabName="formonly" text="Date" tabIndex="7">
+        <Edit width="10"/>
+      </TableColumn>
+      <TableColumn name="formonly.o_customer" colName="o_customer" fieldId="7" sqlTabName="formonly" text="Customer" tabIndex="8">
+        <Edit width="23"/>
+      </TableColumn>
+      <TableColumn name="formonly.o_employee" colName="o_employee" fieldId="8" sqlTabName="formonly" text="Employee" tabIndex="9">
+        <Edit width="14"/>
+      </TableColumn>
+      <TableColumn name="formonly.o_shipper" colName="o_shipper" fieldId="9" sqlTabName="formonly" text="Shipper" tabIndex="10">
+        <Edit width="19"/>
+      </TableColumn>
+      <TableColumn name="formonly.o_shipped" colName="o_shipped" sqlType="DATE" fieldId="10" sqlTabName="formonly" text="Shipped" tabIndex="11">
+        <Edit width="10"/>
+      </TableColumn>
+    </Table>
+    <Table pageSize="1" name="t_lines" height="6" tabName="sr_lines">
+      <TableColumn name="formonly.l_productid" colName="l_productid" fieldId="11" sqlTabName="formonly" text="Product" tabIndex="12">
+        <Edit width="6"/>
+      </TableColumn>
+      <TableColumn name="formonly.l_productname" colName="l_productname" fieldId="12" sqlTabName="formonly" text="Name" tabIndex="13">
+        <Edit width="27"/>
+      </TableColumn>
+      <TableColumn name="formonly.l_unitprice" colName="l_unitprice" fieldId="13" sqlTabName="formonly" text="Price" tabIndex="14">
+        <Edit width="10"/>
+      </TableColumn>
+      <TableColumn name="formonly.l_quantity" colName="l_quantity" fieldId="14" sqlTabName="formonly" text="Qty" tabIndex="15">
+        <Edit width="6"/>
+      </TableColumn>
+      <TableColumn name="formonly.l_discount" colName="l_discount" fieldId="15" sqlTabName="formonly" text="Disc." tabIndex="16">
+        <Edit width="6"/>
+      </TableColumn>
+      <TableColumn name="formonly.l_total" colName="l_total" fieldId="16" sqlTabName="formonly" text="Total" tabIndex="17">
+        <Edit width="12"/>
+      </TableColumn>
+    </Table>
+    <Grid width="53" height="1">
+      <Label text="Ship via" posY="0" posX="1" gridWidth="9"/>
+      <FormField name="formonly.shipvia" colName="shipvia" fieldId="17" sqlTabName="formonly" notNull="1" required="1" tabIndex="18">
+        <ComboBox width="16" posY="0" posX="11" gridWidth="18"/>
+      </FormField>
+      <Label text="Late orders" posY="0" posX="33" gridWidth="12"/>
+      <FormField name="formonly.late_count" colName="late_count" fieldId="18" sqlTabName="formonly" noEntry="1" tabIndex="19">
+        <Edit width="6" posY="0" posX="46" gridWidth="6"/>
+      </FormField>
+    </Grid>
+  </VBox>
+  <RecordView tabName="orders">
+    <Link colName="orderid" fieldIdRef="0"/>
+    <Link colName="orderdate" fieldIdRef="1"/>
+    <Link colName="shipcountry" fieldIdRef="3"/>
+  </RecordView>
+  <RecordView tabName="customers">
+    <Link colName="companyname" fieldIdRef="2"/>
+  </RecordView>
+  <RecordView tabName="employees">
+    <Link colName="lastname" fieldIdRef="4"/>
+  </RecordView>
+  <RecordView tabName="formonly">
+    <Link colName="o_orderid" fieldIdRef="5"/>
+    <Link colName="o_orderdate" fieldIdRef="6"/>
+    <Link colName="o_customer" fieldIdRef="7"/>
+    <Link colName="o_employee" fieldIdRef="8"/>
+    <Link colName="o_shipper" fieldIdRef="9"/>
+    <Link colName="o_shipped" fieldIdRef="10"/>
+    <Link colName="l_productid" fieldIdRef="11"/>
+    <Link colName="l_productname" fieldIdRef="12"/>
+    <Link colName="l_unitprice" fieldIdRef="13"/>
+    <Link colName="l_quantity" fieldIdRef="14"/>
+    <Link colName="l_discount" fieldIdRef="15"/>
+    <Link colName="l_total" fieldIdRef="16"/>
+    <Link colName="shipvia" fieldIdRef="17"/>
+    <Link colName="late_count" fieldIdRef="18"/>
+  </RecordView>
+</Form>

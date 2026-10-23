@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<Form name="nw_queries_customer_q5" build="6.01.00" sqlDbName="northwind" text="Query 5 - Top customers per country" width="88" height="2">
+  <VBox>
+    <Group name="g_param" text="Parameter">
+      <Grid width="43" height="1">
+        <Label text="Top N per country" posY="0" posX="1" gridWidth="18"/>
+        <FormField name="formonly.topn" colName="topn" sqlType="INTEGER" fieldId="0" sqlTabName="formonly" tabIndex="1">
+          <Edit width="6" posY="0" posX="20" gridWidth="6"/>
+        </FormField>
+        <Label text="Rows" posY="0" posX="30" gridWidth="5"/>
+        <FormField name="formonly.rowcount" colName="rowcount" sqlType="INTEGER" fieldId="1" sqlTabName="formonly" noEntry="1" tabIndex="2">
+          <Edit width="6" posY="0" posX="36" gridWidth="6"/>
+        </FormField>
+      </Grid>
+    </Group>
+    <Table pageSize="1" name="t_q5" height="16" tabName="sr_q5">
+      <TableColumn name="formonly.q5_country" colName="q5_country" fieldId="2" sqlTabName="formonly" text="Country" tabIndex="3">
+        <Edit width="15"/>
+      </TableColumn>
+      <TableColumn name="formonly.q5_rank" colName="q5_rank" fieldId="3" sqlTabName="formonly" text="Rank" tabIndex="4">
+        <Edit width="5"/>
+      </TableColumn>
+      <TableColumn name="formonly.q5_company" colName="q5_company" fieldId="4" sqlTabName="formonly" text="Company" tabIndex="5">
+        <Edit width="40"/>
+      </TableColumn>
+      <TableColumn name="formonly.q5_total" colName="q5_total" fieldId="5" sqlTabName="formonly" text="Total sales" tabIndex="6">
+        <Edit width="15"/>
+      </TableColumn>
+      <TableColumn name="formonly.q5_share" colName="q5_share" fieldId="6" sqlTabName="formonly" text="Share %" tabIndex="7">
+        <Edit width="7"/>
+      </TableColumn>
+    </Table>
+  </VBox>
+  <RecordView tabName="formonly">
+    <Link colName="topn" fieldIdRef="0"/>
+    <Link colName="rowcount" fieldIdRef="1"/>
+    <Link colName="q5_country" fieldIdRef="2"/>
+    <Link colName="q5_rank" fieldIdRef="3"/>
+    <Link colName="q5_company" fieldIdRef="4"/>
+    <Link colName="q5_total" fieldIdRef="5"/>
+    <Link colName="q5_share" fieldIdRef="6"/>
+  </RecordView>
+</Form>

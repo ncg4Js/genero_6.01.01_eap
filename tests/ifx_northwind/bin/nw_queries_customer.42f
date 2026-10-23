@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<Form name="nw_queries_customer" build="6.01.00" sqlDbName="northwind" text="Northwind - Customer queries" width="34" height="1">
+  <VBox>
+    <Grid width="34" height="1">
+      <Label text="Choose a query in the start menu." posY="0" posX="1" gridWidth="33"/>
+    </Grid>
+  </VBox>
+</Form>

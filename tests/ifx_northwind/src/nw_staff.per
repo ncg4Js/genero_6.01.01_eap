@@ -1,0 +1,47 @@
+SCHEMA northwind
+
+LAYOUT (TEXT = "Northwind - Staff")
+VBOX
+TABLE t_tree (HEIGHT = 9)
+{
+[c01|c02   |c03                         |c04                       |c05                          ]
+}
+END
+TABLE t_sales (HEIGHT = 9)
+{
+[s01   |s02                 |s03     |s04         |s05     ]
+}
+END
+GRID
+{
+ Territories [f01                                                   ]
+             [                                                      ]
+ Hired before [f02       ]  [f03   ] employees    Anniversaries next month [f04 ]
+}
+END
+END
+END
+
+ATTRIBUTES
+c01 = FORMONLY.t_lvl, TITLE = "Lvl";
+c02 = FORMONLY.t_employeeid, TITLE = "Id";
+c03 = FORMONLY.t_fullname, TITLE = "Employee";
+c04 = FORMONLY.t_title, TITLE = "Title";
+c05 = FORMONLY.t_path, TITLE = "Reports to";
+
+s01 = FORMONLY.s_employeeid, TITLE = "Id";
+s02 = FORMONLY.s_lastname, TITLE = "Employee";
+s03 = FORMONLY.s_norders, TITLE = "Orders";
+s04 = FORMONLY.s_freight, TITLE = "Freight";
+s05 = FORMONLY.s_years, TITLE = "Years";
+
+TEXTEDIT f01 = FORMONLY.territories, NOENTRY, STRETCH = X;
+f02 = FORMONLY.hired_before TYPE DATE;
+f03 = FORMONLY.hired_count, NOENTRY;
+f04 = FORMONLY.ann_count, NOENTRY;
+END
+
+INSTRUCTIONS
+SCREEN RECORD sr_tree (t_lvl, t_employeeid, t_fullname, t_title, t_path);
+SCREEN RECORD sr_sales (s_employeeid, s_lastname, s_norders, s_freight, s_years);
+END

@@ -149,3 +149,9 @@ Problem being tackled: Genero 6.01.01 EAP setup and testing (GAS 6.01.01 and FGL
 
 - C:\work\6.01.01_EAP is a git repository. Remote origin (fetch and push): https://github.com/ncg4Js/genero_6.01.01_eap.git
 
+## 13 - 2026-10-23 10:40 PT - Northwind code duplicated under tests; linter problem gone
+
+- Nuno duplicated all the ifx_northwind code under C:\work\6.01.01_EAP\tests (previously the project used the sources in C:\docker_compose\workspace\GeneroV6\work\tripwires\ifx_northwind_test via relative paths).
+- After this, the linter problem (error -4448 on gslint.42m, entries 4 and 8) is gone.
+- Cause not established. Not verified whether the linter is enabled again or still disabled.
+

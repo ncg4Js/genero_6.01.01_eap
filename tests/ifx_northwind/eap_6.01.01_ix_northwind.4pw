@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<Project defaultApplication="-1429969501" gstVersion="60003" version="3.7">
+<Project defaultApplication="1327855963" gstVersion="60003" version="3.7">
   <Settings>
     <DynamicProperties version="4">
       <DynamicProperty editorInfo="alwaysUpdate:true" initialValue="false" isDefaultInherited="false" isHidden="false" label="Firebase-analytics" name="firebase" readOnly="false" type="BOOLEAN"/>
@@ -68,21 +68,46 @@
       <NodeInfo mimeType="pm/package" properties="packageId;packageLabel;packageVersion;mainModule;packageVersionName;resources;launchScreen;launchScreen1136x640;launchScreen750x1334;launchScreen1334x750;launchScreen1242x2208;launchScreen2208x1242;launchScreen1125x2436;launchScreen2436x1125;launchScreen768x1024;launchScreen1024x768;launchScreen1536x2048;launchScreen2048x1536;launchScreen2224x1668;launchScreen1668x2224;launchScreen2048x2732;launchScreen2732x2048;launchScreenXib;icon29x29;icon40x40;icon58x58;icon60x60;icon76x76;icon80x80;icon87x87;icon120x120;icon152x152;icon167x167;icon180x180;icon1024x1024;gma-primary-color;gma-primary-dark-color;gma-accent-color;gma-actionbar-color;gma-primaryText-color;gma-windowBackground-color;gma-navigationBarBackground-color;icon-ldpi;icon-mdpi;icon-hdpi;icon-xhdpi;icon-xxhdpi;status-icon-mdpi;status-icon-hdpi;status-icon-xhdpi;permissions;required;gma-foreground-services;gma-background-explanation;firebase;gma-cordova;gmi-cordova"/>
     </NodeInfos>
   </Settings>
-  <LanguageList version="1.0"/>
+  <LanguageList version="1.0">
+    <Language name="Genero">
+      <BuildRuleList/>
+      <LinkRuleList/>
+      <VariableList>
+        <Variable name="NW_USER" type="value" value="genero"/>
+        <Variable name="NW_PASSWORD" type="value" value="genero"/>
+        <Variable name="FGLPROFILE" type="file" value="$(ProjectDir)/resources/fglprofile.win"/>
+        <Variable name="FGLRESOURCEPATH" type="dirlist" value="$(FGLRESOURCEPATH);$(ProjectDir)/resources"/>
+        <Variable name="FGLDBPATH" type="dirlist" value="$(FGLDBPATH);$(ProjectDir)/schema"/>
+      </VariableList>
+    </Language>
+  </LanguageList>
   <PlatformList version="1.0"/>
   <Group id="75644415" label="northwind" language="Genero">
     <Library binaryName="Databases" id="1986" label="Databases">
-      <File filePath="../../../../docker_compose/workspace/GeneroV6/work/tripwires/ifx_northwind_test/schema/northwind.sch"/>
+      <File filePath="schema/northwind.sch"/>
     </Library>
     <Library binaryName="Library" dependencies="1986" id="14000" label="Library">
-      <File filePath="../../../../docker_compose/workspace/GeneroV6/work/tripwires/ifx_northwind_test/src/nw_common.4gl"/>
+      <File filePath="src/nw_common.4gl"/>
     </Library>
     <Application binaryName="nw_customers" dependencies="14000,1986" id="18736" label="nw_customers">
       <Configuration id="-1429969501" label="nw_customers"/>
-      <File filePath="../../../../docker_compose/workspace/GeneroV6/work/tripwires/ifx_northwind_test/src/nw_customers.4gl"/>
-      <File filePath="../../../../docker_compose/workspace/GeneroV6/work/tripwires/ifx_northwind_test/src/nw_customers.per"/>
-      <File filePath="resources/nw_customers.xcf"/>
-      <File filePath="../../../../docker_compose/workspace/GeneroV6/work/tripwires/ifx_northwind_test/src/nw_customers_db.4gl"/>
+      <File filePath="src/nw_customers.4gl"/>
+      <File filePath="src/nw_customers.per"/>
+      <File filePath="src/nw_customers_db.4gl"/>
     </Application>
+    <Application binaryName="nw_queries_customer" id="1190387843" label="nw_queries_customer">
+      <Configuration id="1327855963" label="nw_queries_customer"/>
+      <File filePath="src/nw_queries_customer.4gl"/>
+      <File filePath="resources/nw_queries_customer.4sm"/>
+      <File filePath="src/nw_queries_customer.per"/>
+      <File filePath="src/nw_queries_customer_q1.per"/>
+      <File filePath="src/nw_queries_customer_q2.per"/>
+      <File filePath="src/nw_queries_customer_q3.per"/>
+      <File filePath="src/nw_queries_customer_q4.per"/>
+      <File filePath="src/nw_queries_customer_q5.per"/>
+    </Application>
+    <Library binaryName="resources" excludeFromBuild="true" id="619081972" label="resources">
+      <File filePath="resources/fglprofile.win"/>
+    </Library>
   </Group>
 </Project>

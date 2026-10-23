@@ -1,0 +1,49 @@
+SCHEMA northwind
+
+LAYOUT (TEXT = "Northwind - Catalogue")
+VBOX
+GROUP g_search (TEXT = "Search")
+GRID
+{
+ Product [f01                  ]  Price [f02       ]  Stock [f03     ]
+}
+END
+END
+TABLE t_products (HEIGHT = 14)
+{
+[c01   |c02                   |c03          |c04                   |c05       |c06     |c07         ]
+}
+END
+GRID
+{
+ Category [s01             ]  Change % [s02    ]   Idle suppliers [s03  ]
+}
+END
+END
+END
+
+TABLES
+products
+END
+
+ATTRIBUTES
+f01 = products.productname;
+f02 = products.unitprice;
+f03 = products.unitsinstock;
+
+c01 = FORMONLY.p_productid, TITLE = "Id";
+c02 = FORMONLY.p_productname, TITLE = "Product";
+c03 = FORMONLY.p_categoryname, TITLE = "Category";
+c04 = FORMONLY.p_supplier, TITLE = "Supplier";
+c05 = FORMONLY.p_unitprice, TITLE = "Price";
+c06 = FORMONLY.p_unitsinstock, TITLE = "Stock";
+c07 = FORMONLY.p_status, TITLE = "Status";
+
+COMBOBOX s01 = FORMONLY.categoryid;
+s02 = FORMONLY.pct TYPE DECIMAL(5,2);
+s03 = FORMONLY.idle_count, NOENTRY;
+END
+
+INSTRUCTIONS
+SCREEN RECORD sr_products (p_productid, p_productname, p_categoryname, p_supplier, p_unitprice, p_unitsinstock, p_status);
+END

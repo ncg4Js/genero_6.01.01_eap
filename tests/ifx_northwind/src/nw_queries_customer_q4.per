@@ -1,0 +1,35 @@
+SCHEMA northwind
+
+LAYOUT (TEXT = "Query 4 - Buyers of a category")
+VBOX
+GROUP g_param (TEXT = "Parameter")
+GRID
+{
+ Category [f01                 ]   Rows [f02   ]
+}
+END
+END
+TABLE t_q4 (HEIGHT = 16)
+{
+[a01  |a02                                     |a03                  |a04    |a05    |a06    |a07          ]
+}
+END
+END
+END
+
+ATTRIBUTES
+COMBOBOX f01 = FORMONLY.categoryid TYPE INTEGER;
+f02 = FORMONLY.rowcount TYPE INTEGER, NOENTRY;
+
+a01 = FORMONLY.q4_id, TITLE = "Id";
+a02 = FORMONLY.q4_company, TITLE = "Company";
+a03 = FORMONLY.q4_segment, TITLE = "Segment";
+a04 = FORMONLY.q4_norders, TITLE = "Orders";
+a05 = FORMONLY.q4_nemps, TITLE = "Empl.";
+a06 = FORMONLY.q4_nshippers, TITLE = "Ship.";
+a07 = FORMONLY.q4_freight, TITLE = "Freight";
+END
+
+INSTRUCTIONS
+SCREEN RECORD sr_q4 (q4_id, q4_company, q4_segment, q4_norders, q4_nemps, q4_nshippers, q4_freight);
+END

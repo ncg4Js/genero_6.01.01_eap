@@ -1,0 +1,32 @@
+SCHEMA northwind
+
+LAYOUT (TEXT = "Query 2 - Orders per customer")
+VBOX
+GROUP g_param (TEXT = "Parameter")
+GRID
+{
+ Country pattern [f01            ]   Rows [f02   ]
+}
+END
+END
+TABLE t_q2 (HEIGHT = 16)
+{
+[a01  |a02                                     |a03    |a04          ]
+}
+END
+END
+END
+
+ATTRIBUTES
+f01 = FORMONLY.ctry;
+f02 = FORMONLY.rowcount TYPE INTEGER, NOENTRY;
+
+a01 = FORMONLY.q2_id, TITLE = "Id";
+a02 = FORMONLY.q2_company, TITLE = "Company";
+a03 = FORMONLY.q2_norders, TITLE = "Orders";
+a04 = FORMONLY.q2_last, TITLE = "Last order";
+END
+
+INSTRUCTIONS
+SCREEN RECORD sr_q2 (q2_id, q2_company, q2_norders, q2_last);
+END

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<Form name="nw_queries_customer_q2" build="6.01.00" sqlDbName="northwind" text="Query 2 - Orders per customer" width="70" height="2">
+  <VBox>
+    <Group name="g_param" text="Parameter">
+      <Grid width="50" height="1">
+        <Label text="Country pattern" posY="0" posX="1" gridWidth="16"/>
+        <FormField name="formonly.ctry" colName="ctry" fieldId="0" sqlTabName="formonly" tabIndex="1">
+          <Edit width="15" posY="0" posX="18" gridWidth="15"/>
+        </FormField>
+        <Label text="Rows" posY="0" posX="37" gridWidth="5"/>
+        <FormField name="formonly.rowcount" colName="rowcount" sqlType="INTEGER" fieldId="1" sqlTabName="formonly" noEntry="1" tabIndex="2">
+          <Edit width="6" posY="0" posX="43" gridWidth="6"/>
+        </FormField>
+      </Grid>
+    </Group>
+    <Table pageSize="1" name="t_q2" height="16" tabName="sr_q2">
+      <TableColumn name="formonly.q2_id" colName="q2_id" fieldId="2" sqlTabName="formonly" text="Id" tabIndex="3">
+        <Edit width="5"/>
+      </TableColumn>
+      <TableColumn name="formonly.q2_company" colName="q2_company" fieldId="3" sqlTabName="formonly" text="Company" tabIndex="4">
+        <Edit width="40"/>
+      </TableColumn>
+      <TableColumn name="formonly.q2_norders" colName="q2_norders" fieldId="4" sqlTabName="formonly" text="Orders" tabIndex="5">
+        <Edit width="7"/>
+      </TableColumn>
+      <TableColumn name="formonly.q2_last" colName="q2_last" fieldId="5" sqlTabName="formonly" text="Last order" tabIndex="6">
+        <Edit width="13"/>
+      </TableColumn>
+    </Table>
+  </VBox>
+  <RecordView tabName="formonly">
+    <Link colName="ctry" fieldIdRef="0"/>
+    <Link colName="rowcount" fieldIdRef="1"/>
+    <Link colName="q2_id" fieldIdRef="2"/>
+    <Link colName="q2_company" fieldIdRef="3"/>
+    <Link colName="q2_norders" fieldIdRef="4"/>
+    <Link colName="q2_last" fieldIdRef="5"/>
+  </RecordView>
+</Form>

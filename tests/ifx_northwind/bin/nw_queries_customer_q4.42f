@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<Form name="nw_queries_customer_q4" build="6.01.00" sqlDbName="northwind" text="Query 4 - Buyers of a category" width="108" height="2">
+  <VBox>
+    <Group name="g_param" text="Parameter">
+      <Grid width="48" height="1">
+        <Label text="Category" posY="0" posX="1" gridWidth="9"/>
+        <FormField name="formonly.categoryid" colName="categoryid" sqlType="INTEGER" fieldId="0" sqlTabName="formonly" tabIndex="1">
+          <ComboBox width="18" posY="0" posX="11" gridWidth="20"/>
+        </FormField>
+        <Label text="Rows" posY="0" posX="35" gridWidth="5"/>
+        <FormField name="formonly.rowcount" colName="rowcount" sqlType="INTEGER" fieldId="1" sqlTabName="formonly" noEntry="1" tabIndex="2">
+          <Edit width="6" posY="0" posX="41" gridWidth="6"/>
+        </FormField>
+      </Grid>
+    </Group>
+    <Table pageSize="1" name="t_q4" height="16" tabName="sr_q4">
+      <TableColumn name="formonly.q4_id" colName="q4_id" fieldId="2" sqlTabName="formonly" text="Id" tabIndex="3">
+        <Edit width="5"/>
+      </TableColumn>
+      <TableColumn name="formonly.q4_company" colName="q4_company" fieldId="3" sqlTabName="formonly" text="Company" tabIndex="4">
+        <Edit width="40"/>
+      </TableColumn>
+      <TableColumn name="formonly.q4_segment" colName="q4_segment" fieldId="4" sqlTabName="formonly" text="Segment" tabIndex="5">
+        <Edit width="21"/>
+      </TableColumn>
+      <TableColumn name="formonly.q4_norders" colName="q4_norders" fieldId="5" sqlTabName="formonly" text="Orders" tabIndex="6">
+        <Edit width="7"/>
+      </TableColumn>
+      <TableColumn name="formonly.q4_nemps" colName="q4_nemps" fieldId="6" sqlTabName="formonly" text="Empl." tabIndex="7">
+        <Edit width="7"/>
+      </TableColumn>
+      <TableColumn name="formonly.q4_nshippers" colName="q4_nshippers" fieldId="7" sqlTabName="formonly" text="Ship." tabIndex="8">
+        <Edit width="7"/>
+      </TableColumn>
+      <TableColumn name="formonly.q4_freight" colName="q4_freight" fieldId="8" sqlTabName="formonly" text="Freight" tabIndex="9">
+        <Edit width="13"/>
+      </TableColumn>
+    </Table>
+  </VBox>
+  <RecordView tabName="formonly">
+    <Link colName="categoryid" fieldIdRef="0"/>
+    <Link colName="rowcount" fieldIdRef="1"/>
+    <Link colName="q4_id" fieldIdRef="2"/>
+    <Link colName="q4_company" fieldIdRef="3"/>
+    <Link colName="q4_segment" fieldIdRef="4"/>
+    <Link colName="q4_norders" fieldIdRef="5"/>
+    <Link colName="q4_nemps" fieldIdRef="6"/>
+    <Link colName="q4_nshippers" fieldIdRef="7"/>
+    <Link colName="q4_freight" fieldIdRef="8"/>
+  </RecordView>
+</Form>

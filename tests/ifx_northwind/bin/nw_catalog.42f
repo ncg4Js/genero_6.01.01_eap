@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Form name="nw_catalog" build="6.00.02" sqlDbName="northwind" text="Northwind - Catalogue" width="101" height="3">
+  <VBox>
+    <Group name="g_search" text="Search">
+      <Grid width="70" height="1">
+        <Label text="Product" posY="0" posX="1" gridWidth="8"/>
+        <FormField name="products.productname" colName="productname" sqlType="VARCHAR(40)" fieldId="0" sqlTabName="products" tabIndex="1">
+          <Edit width="21" posY="0" posX="10" gridWidth="21"/>
+        </FormField>
+        <Label text="Price" posY="0" posX="34" gridWidth="6"/>
+        <FormField name="products.unitprice" colName="unitprice" sqlType="DECIMAL(10,2)" fieldId="1" sqlTabName="products" tabIndex="2">
+          <Edit width="10" posY="0" posX="41" gridWidth="10"/>
+        </FormField>
+        <Label text="Stock" posY="0" posX="54" gridWidth="6"/>
+        <FormField name="products.unitsinstock" colName="unitsinstock" sqlType="INTEGER" fieldId="2" sqlTabName="products" tabIndex="3">
+          <Edit width="8" posY="0" posX="61" gridWidth="8"/>
+        </FormField>
+      </Grid>
+    </Group>
+    <Table pageSize="1" name="t_products" height="14" tabName="sr_products">
+      <TableColumn name="formonly.p_productid" colName="p_productid" fieldId="3" sqlTabName="formonly" text="Id" tabIndex="4">
+        <Edit width="6"/>
+      </TableColumn>
+      <TableColumn name="formonly.p_productname" colName="p_productname" fieldId="4" sqlTabName="formonly" text="Product" tabIndex="5">
+        <Edit width="22"/>
+      </TableColumn>
+      <TableColumn name="formonly.p_categoryname" colName="p_categoryname" fieldId="5" sqlTabName="formonly" text="Category" tabIndex="6">
+        <Edit width="13"/>
+      </TableColumn>
+      <TableColumn name="formonly.p_supplier" colName="p_supplier" fieldId="6" sqlTabName="formonly" text="Supplier" tabIndex="7">
+        <Edit width="22"/>
+      </TableColumn>
+      <TableColumn name="formonly.p_unitprice" colName="p_unitprice" fieldId="7" sqlTabName="formonly" text="Price" tabIndex="8">
+        <Edit width="10"/>
+      </TableColumn>
+      <TableColumn name="formonly.p_unitsinstock" colName="p_unitsinstock" fieldId="8" sqlTabName="formonly" text="Stock" tabIndex="9">
+        <Edit width="8"/>
+      </TableColumn>
+      <TableColumn name="formonly.p_status" colName="p_status" fieldId="9" sqlTabName="formonly" text="Status" tabIndex="10">
+        <Edit width="12"/>
+      </TableColumn>
+    </Table>
+    <Grid width="73" height="1">
+      <Label text="Category" posY="0" posX="1" gridWidth="9"/>
+      <FormField name="formonly.categoryid" colName="categoryid" fieldId="10" sqlTabName="formonly" tabIndex="11">
+        <ComboBox width="14" posY="0" posX="11" gridWidth="16"/>
+      </FormField>
+      <Label text="Change %" posY="0" posX="30" gridWidth="9"/>
+      <FormField name="formonly.pct" colName="pct" sqlType="DECIMAL(5,2)" fieldId="11" sqlTabName="formonly" tabIndex="12">
+        <Edit width="7" posY="0" posX="40" gridWidth="7"/>
+      </FormField>
+      <Label text="Idle suppliers" posY="0" posX="51" gridWidth="15"/>
+      <FormField name="formonly.idle_count" colName="idle_count" fieldId="12" sqlTabName="formonly" noEntry="1" tabIndex="13">
+        <Edit width="5" posY="0" posX="67" gridWidth="5"/>
+      </FormField>
+    </Grid>
+  </VBox>
+  <RecordView tabName="products">
+    <Link colName="productname" fieldIdRef="0"/>
+    <Link colName="unitprice" fieldIdRef="1"/>
+    <Link colName="unitsinstock" fieldIdRef="2"/>
+  </RecordView>
+  <RecordView tabName="formonly">
+    <Link colName="p_productid" fieldIdRef="3"/>
+    <Link colName="p_productname" fieldIdRef="4"/>
+    <Link colName="p_categoryname" fieldIdRef="5"/>
+    <Link colName="p_supplier" fieldIdRef="6"/>
+    <Link colName="p_unitprice" fieldIdRef="7"/>
+    <Link colName="p_unitsinstock" fieldIdRef="8"/>
+    <Link colName="p_status" fieldIdRef="9"/>
+    <Link colName="categoryid" fieldIdRef="10"/>
+    <Link colName="pct" fieldIdRef="11"/>
+    <Link colName="idle_count" fieldIdRef="12"/>
+  </RecordView>
+</Form>

@@ -1,0 +1,33 @@
+SCHEMA northwind
+
+LAYOUT (TEXT = "Query 3 - Sales per customer")
+VBOX
+GROUP g_param (TEXT = "Parameter")
+GRID
+{
+ Minimum sales [f01          ]   Rows [f02   ]
+}
+END
+END
+TABLE t_q3 (HEIGHT = 16)
+{
+[a01  |a02                                     |a03            |a04    |a05            ]
+}
+END
+END
+END
+
+ATTRIBUTES
+f01 = FORMONLY.minsales TYPE DECIMAL(12,2);
+f02 = FORMONLY.rowcount TYPE INTEGER, NOENTRY;
+
+a01 = FORMONLY.q3_id, TITLE = "Id";
+a02 = FORMONLY.q3_company, TITLE = "Company";
+a03 = FORMONLY.q3_country, TITLE = "Country";
+a04 = FORMONLY.q3_norders, TITLE = "Orders";
+a05 = FORMONLY.q3_total, TITLE = "Total sales";
+END
+
+INSTRUCTIONS
+SCREEN RECORD sr_q3 (q3_id, q3_company, q3_country, q3_norders, q3_total);
+END

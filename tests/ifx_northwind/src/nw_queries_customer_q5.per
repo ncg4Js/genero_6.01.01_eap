@@ -1,0 +1,33 @@
+SCHEMA northwind
+
+LAYOUT (TEXT = "Query 5 - Top customers per country")
+VBOX
+GROUP g_param (TEXT = "Parameter")
+GRID
+{
+ Top N per country [f01   ]   Rows [f02   ]
+}
+END
+END
+TABLE t_q5 (HEIGHT = 16)
+{
+[a01            |a02  |a03                                     |a04            |a05    ]
+}
+END
+END
+END
+
+ATTRIBUTES
+f01 = FORMONLY.topn TYPE INTEGER;
+f02 = FORMONLY.rowcount TYPE INTEGER, NOENTRY;
+
+a01 = FORMONLY.q5_country, TITLE = "Country";
+a02 = FORMONLY.q5_rank, TITLE = "Rank";
+a03 = FORMONLY.q5_company, TITLE = "Company";
+a04 = FORMONLY.q5_total, TITLE = "Total sales";
+a05 = FORMONLY.q5_share, TITLE = "Share %";
+END
+
+INSTRUCTIONS
+SCREEN RECORD sr_q5 (q5_country, q5_rank, q5_company, q5_total, q5_share);
+END

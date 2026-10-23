@@ -1,0 +1,63 @@
+SCHEMA northwind
+
+LAYOUT (TEXT = "Northwind - Order desk")
+VBOX
+GROUP g_search (TEXT = "Search")
+GRID
+{
+ Order  [f01       ]  Date [f02       ]  Customer [f03                  ]
+ Ship to[f04            ]  Employee [f05     ]
+}
+END
+END
+TABLE t_orders (HEIGHT = 10)
+{
+[c01       |c02       |c03                    |c04           |c05                |c06       ]
+}
+END
+TABLE t_lines (HEIGHT = 6)
+{
+[l01   |l02                        |l03       |l04   |l05   |l06         ]
+}
+END
+GRID
+{
+ Ship via [s01               ]   Late orders [s02   ]
+}
+END
+END
+END
+
+TABLES
+orders, customers, employees, shippers, order_details, products
+END
+
+ATTRIBUTES
+f01 = orders.orderid;
+f02 = orders.orderdate;
+f03 = customers.companyname;
+f04 = orders.shipcountry;
+f05 = employees.lastname;
+
+c01 = FORMONLY.o_orderid, TITLE = "Order";
+c02 = FORMONLY.o_orderdate TYPE DATE, TITLE = "Date";
+c03 = FORMONLY.o_customer, TITLE = "Customer";
+c04 = FORMONLY.o_employee, TITLE = "Employee";
+c05 = FORMONLY.o_shipper, TITLE = "Shipper";
+c06 = FORMONLY.o_shipped TYPE DATE, TITLE = "Shipped";
+
+l01 = FORMONLY.l_productid, TITLE = "Product";
+l02 = FORMONLY.l_productname, TITLE = "Name";
+l03 = FORMONLY.l_unitprice, TITLE = "Price";
+l04 = FORMONLY.l_quantity, TITLE = "Qty";
+l05 = FORMONLY.l_discount, TITLE = "Disc.";
+l06 = FORMONLY.l_total, TITLE = "Total";
+
+COMBOBOX s01 = FORMONLY.shipvia, NOT NULL;
+s02 = FORMONLY.late_count, NOENTRY;
+END
+
+INSTRUCTIONS
+SCREEN RECORD sr_orders (o_orderid, o_orderdate, o_customer, o_employee, o_shipper, o_shipped);
+SCREEN RECORD sr_lines (l_productid, l_productname, l_unitprice, l_quantity, l_discount, l_total);
+END

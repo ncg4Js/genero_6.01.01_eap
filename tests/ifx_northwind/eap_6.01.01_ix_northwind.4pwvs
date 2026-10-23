@@ -6,7 +6,19 @@
     <Node path="/northwind[group]/Databases[library]"/>
     <Node path="/northwind[group]/Library[library]"/>
     <Node path="/northwind[group]/nw_customers[application]"/>
+    <Node path="/northwind[group]/nw_queries_customer[application]"/>
+    <Node path="/northwind[group]/resources[library]"/>
   </ExpandedNodes>
-  <OpenDocuments/>
-  <CurrentDocument filePath="" module="mod-wp"/>
+  <OpenDocuments>
+    <Document container="true" filePath="src/nw_customers.4gl" locator="71:21" module="mod-ce3">
+      <Data name="8" value="CP1252"/>
+    </Document>
+    <Document container="true" filePath="src/nw_customers_db.4gl" locator="29:45" module="mod-ce3">
+      <Data name="8" value="CP1252"/>
+    </Document>
+    <Document container="true" filePath="src/nw_queries_customer.4gl" locator="15:1" module="mod-ce3">
+      <Data name="8" value="CP1252"/>
+    </Document>
+  </OpenDocuments>
+  <CurrentDocument filePath="src/nw_queries_customer.4gl" module="mod-ce3"/>
 </WorkspaceViewState>

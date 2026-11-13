@@ -6,7 +6,7 @@
 <Dep t="src/nw_customers_db.4gl"/>
 </File>
 <File n="src/nw_customers_db.4gl" s="1" ts="20261023112005893"/>
-<File n="src/nw_queries_customer.4gl" s="1" ts="20261023114437032">
+<File n="src/nw_queries_customer.4gl" s="1" ts="20261026113447518">
 <Dep t="src/nw_common.4gl"/>
 </File>
 </WorkspaceDatabase>

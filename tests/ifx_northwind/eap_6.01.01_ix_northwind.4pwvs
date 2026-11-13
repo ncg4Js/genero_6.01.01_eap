@@ -10,13 +10,14 @@
     <Node path="/northwind[group]/resources[library]"/>
   </ExpandedNodes>
   <OpenDocuments>
-    <Document container="true" filePath="src/nw_customers.4gl" locator="71:21" module="mod-ce3">
+    <Document container="true" filePath="src/nw_customers.4gl" locator="29:23" module="mod-ce3">
       <Data name="8" value="CP1252"/>
     </Document>
-    <Document container="true" filePath="src/nw_customers_db.4gl" locator="29:45" module="mod-ce3">
+    <Document container="true" filePath="src/nw_common.4gl" locator="1:1" module="mod-ce3">
       <Data name="8" value="CP1252"/>
     </Document>
-    <Document container="true" filePath="src/nw_queries_customer.4gl" locator="15:1" module="mod-ce3">
+    <Document container="true" filePath="C:/work/6.01.01_EAP/tests/ifx_northwind/schema/northwind.4db" locator="" module="mod-db3"/>
+    <Document container="true" filePath="src/nw_queries_customer.4gl" locator="69:27" module="mod-ce3">
       <Data name="8" value="CP1252"/>
     </Document>
   </OpenDocuments>

@@ -78,11 +78,21 @@
         <Variable name="FGLPROFILE" type="file" value="$(ProjectDir)/resources/fglprofile.win"/>
         <Variable name="FGLRESOURCEPATH" type="dirlist" value="$(FGLRESOURCEPATH);$(ProjectDir)/resources"/>
         <Variable name="FGLDBPATH" type="dirlist" value="$(FGLDBPATH);$(ProjectDir)/schema"/>
+        <Variable name="FGLLDPATH" type="dirlist" value="$(FGLLDPATH);$(ProjectDir)/bin"/>
+        <Variable name="FGLSOURCEPATH" type="dirlist" value="$(FGLSOURCEPATH);$(ProjectDir)/src"/>
+      </VariableList>
+    </Language>
+    <Language name="Genero (no link)">
+      <BuildRuleList/>
+      <LinkRuleList/>
+      <VariableList>
+        <Variable name="FGLDBPATH" type="dirlist" value="$(FGLDBPATH);$(ProjectDir)/schema"/>
+        <Variable name="FGLLDPATH" type="dirlist" value="$(FGLDPATH);$(ProjectDir)/bin/nw_customers;$(ProjectDir)/bin/nw_queries_customer;$(ProjectDir)/bin/lib"/>
       </VariableList>
     </Language>
   </LanguageList>
   <PlatformList version="1.0"/>
-  <Group id="75644415" label="northwind" language="Genero">
+  <Group environment="value:TST_USER=carochinha" id="75644415" label="northwind" language="Genero">
     <Library binaryName="Databases" id="1986" label="Databases">
       <File filePath="schema/northwind.sch"/>
     </Library>
@@ -93,6 +103,7 @@
       <Configuration id="-1429969501" label="nw_customers"/>
       <File filePath="src/nw_customers.4gl"/>
       <File filePath="src/nw_customers.per"/>
+      <File filePath="xcf/nw_customers.xcf"/>
       <File filePath="src/nw_customers_db.4gl"/>
     </Application>
     <Application binaryName="nw_queries_customer" id="1190387843" label="nw_queries_customer">
@@ -100,6 +111,7 @@
       <File filePath="src/nw_queries_customer.4gl"/>
       <File filePath="resources/nw_queries_customer.4sm"/>
       <File filePath="src/nw_queries_customer.per"/>
+      <File filePath="xcf/nw_queries_customer.xcf"/>
       <File filePath="src/nw_queries_customer_q1.per"/>
       <File filePath="src/nw_queries_customer_q2.per"/>
       <File filePath="src/nw_queries_customer_q3.per"/>
